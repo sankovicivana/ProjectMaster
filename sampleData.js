@@ -1,6 +1,5 @@
-//import someName from "./output.json";
 import fs from 'fs';
-import ObjectsToCsv from 'objects-to-csv';
+
 //const { config } = JSON.parse(fs.readFileSync('output.json'));
 const readFile = () => new Promise((resolve, reject)  => {
     fs.readFile('output3.json', (err, data) => {
@@ -8,11 +7,14 @@ const readFile = () => new Promise((resolve, reject)  => {
         resolve(JSON.parse(data));
     });
 });
-(async () => {
-    let posts = [];
 
-    posts = await readFile();
-    let safety = [];
+(async () => {
+
+  let posts = [];
+
+  posts = await readFile();
+  posts = posts.slice(0, 10);
+  let safety = [];
     let equipment = [];
     let state = [];
 
@@ -87,19 +89,16 @@ const readFile = () => new Promise((resolve, reject)  => {
         updatedPosts.push(post);
         //console.log(post);
     }
-    console.log(updatedPosts[0]);
-    console.log(updatedPosts[1]);
-    console.log(updatedPosts[2]);
-    let dataJSON = JSON.stringify(updatedPosts,null,2);
-    fs.writeFile("podaci3.json", dataJSON, 'utf8', function (err) {
-        if (err) {
-            console.log("An error occured while writing JSON Object to File.");
-            return console.log(err);
-        }
-     
-        console.log("JSON file has been saved.");
-    });
+  console.log(posts);
+  let dataJSON = JSON.stringify(updatedPosts, null, 2);
+  fs.writeFile("sampleData.json", dataJSON, 'utf8', function (err) {
+    if (err) {
+        console.log("An error occured while writing JSON Object to File.");
+        return console.log(err);
+    }
+ 
+    console.log("JSON file has been saved.");
+  });
 
-    const csv = new ObjectsToCsv(updatedPosts);
-    await csv.toDisk('./data_for_test3.csv');
-})();
+
+})()
