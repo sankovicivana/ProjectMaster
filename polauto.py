@@ -39,3 +39,5 @@ print("Oštećenje", df['Oštećenje'].isnull().sum())                          
 print("description", df['description'].isnull().sum())                          #description 3146
 
 
+#izbacivanje celih kolona koje imaju nekoliko hiljada linija null vrednosti
+df.drop(columns=['Vlasništvo', 'Plivajući zamajac', 'description', 'Zamena', 'Materijal enterijera', 'Boja enterijera'], axis=1, inplace=True)
