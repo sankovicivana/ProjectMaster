@@ -2,6 +2,8 @@
 import pandas as pd;
 df = pd.read_csv("data_for_test3.csv");
 
+#Data Cleaning
+
 #Kilometraža - nakon preuzimanja podataka hiljade su napisane sa tackom 300.000 i ovo je detektovano kao 300.0 samim tim da bi popravila ovaj problem pomozene su sa 1000
 df.Kilometraža = df.Kilometraža * 1000
 
