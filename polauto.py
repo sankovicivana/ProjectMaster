@@ -13,3 +13,29 @@ print("Cols", df.shape[1]) #156
 nan_cols = [i for i in df.columns if df[i].isnull().any()]
 print(nan_cols)
 #['Model', 'Godište', 'Kilometraža', 'Karoserija', 'Gorivo', 'Snaga motora', 'Zamena', 'Plivajući zamajac', 'Emisiona klasa motora', 'Pogon', 'Menjač', 'Broj vrata', 'Broj sedišta', 'Strana volana', 'Klima', 'Boja', 'Materijal enterijera', 'Boja enterijera', 'Registrovan do', 'Vlasništvo', 'Oštećenje', 'description']
+
+
+print("Model", df['Model'].isnull().sum()) #Model 8
+print("Godište", df['Godište'].isnull().sum())
+print("Kilometraža", df['Kilometraža'].isnull().sum())
+print("Karoserija", df['Karoserija'].isnull().sum())
+print("Gorivo", df['Gorivo'].isnull().sum())
+print("Snaga motora", df['Snaga motora'].isnull().sum())
+print("Zamena", df['Zamena'].isnull().sum())
+print("Plivajući zamajac", df['Plivajući zamajac'].isnull().sum())
+print("Emisiona klasa motora", df['Emisiona klasa motora'].isnull().sum())
+print("Pogon", df['Pogon'].isnull().sum())
+print("Menjač", df['Menjač'].isnull().sum())
+print("Broj vrata", df['Broj vrata'].isnull().sum())
+print("Broj sedišta", df['Broj sedišta'].isnull().sum())
+print("Strana volana", df['Strana volana'].isnull().sum())
+print("Klima", df['Klima'].isnull().sum())
+print("Boja", df['Boja'].isnull().sum())
+print("Materijal enterijera", df['Materijal enterijera'].isnull().sum())
+print("Boja enterijera", df['Boja enterijera'].isnull().sum())
+print("Registrovan do", df['Registrovan do'].isnull().sum())
+print("Vlasništvo", df['Vlasništvo'].isnull().sum())
+print("Oštećenje", df['Oštećenje'].isnull().sum())
+print("description", df['description'].isnull().sum())
+
+
