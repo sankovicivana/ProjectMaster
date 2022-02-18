@@ -46,7 +46,7 @@ df.drop(columns=['Vlasništvo', 'Plivajući zamajac', 'description', 'Zamena', '
 df.dropna(subset = ['Model','Godište','Kilometraža','Karoserija','Gorivo','Snaga motora','Emisiona klasa motora','Pogon','Menjač','Broj vrata','Broj sedišta','Strana volana','Klima','Boja','Registrovan do','Oštećenje'], inplace=True)
 
 #size of data frame
-print("Rows", df.shape[0]) #36330 
-print("Cols", df.shape[1]) #156
+print("Rows", df.shape[0]) #48546 
+print("Cols", df.shape[1]) #150
 
 
