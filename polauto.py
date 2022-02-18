@@ -41,3 +41,7 @@ print("description", df['description'].isnull().sum())                          
 
 #izbacivanje celih kolona koje imaju nekoliko hiljada linija null vrednosti
 df.drop(columns=['Vlasništvo', 'Plivajući zamajac', 'description', 'Zamena', 'Materijal enterijera', 'Boja enterijera'], axis=1, inplace=True)
+
+#izbacivanje redova sa null vrednostima
+df.dropna(subset = ['Model','Godište','Kilometraža','Karoserija','Gorivo','Snaga motora','Emisiona klasa motora','Pogon','Menjač','Broj vrata','Broj sedišta','Strana volana','Klima','Boja','Registrovan do','Oštećenje'], inplace=True)
+
