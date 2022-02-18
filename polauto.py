@@ -45,8 +45,23 @@ df.drop(columns=['Vlasništvo', 'Plivajući zamajac', 'description', 'Zamena', '
 #izbacivanje redova sa null vrednostima
 df.dropna(subset = ['Model','Godište','Kilometraža','Karoserija','Gorivo','Snaga motora','Emisiona klasa motora','Pogon','Menjač','Broj vrata','Broj sedišta','Strana volana','Klima','Boja','Registrovan do','Oštećenje'], inplace=True)
 
-#size of data frame
+#size of data frame after procesing
 print("Rows", df.shape[0]) #48546 
 print("Cols", df.shape[1]) #150
+
+#Divide data into train valid test 80 10 10
+train_size = 0.8
+valid_size=0.1
+train_index = int(len(df)*train_size)
+train_index 
+
+df_train = df[0:train_index] #0 do 39 031
+
+valid_index = int(len(df)*valid_size)
+valid_index 
+
+df_valid = df[train_index:train_index+valid_index] #od 39 031 do 39031+valid index (4878)
+df_test = df[train_index+valid_index:] #od 39031+4878 do kraja
+
 
 
