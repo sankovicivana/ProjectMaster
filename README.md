@@ -1,5 +1,7 @@
 # PolovniAutomobilScraper
 
-#import pandas and read from file
-import pandas as pd; <br/>
-df = pd.read_csv("data_for_test3.csv"); <br/>
+Rezultati podataka podeljenih u test/train i pusteni kroz model 80 20
+
+<b>Linear Regression Model</b>
+
+
